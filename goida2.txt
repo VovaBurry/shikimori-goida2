@@ -113,6 +113,31 @@ a, .b-link, button, [data-tab-switch], .b-js-link {
     transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
 }
 
+/* --- 2.1. КУРСОР НА ИНТЕРАКТИВНЫХ БЛОКАХ ---
+
+   Курсор из темы держится только там, где тема его сама поставила:
+   ссылки, кнопки, табы. На наведении карточки получают border и
+   filter: drop-shadow - браузер создаёт новый слой отрисовки и на
+   вложенных спанах/полосках сам подставляет свой "text/pointer".
+   Явно отдаём наследование внутри ссылок, чтобы картинка не слетала. */
+a *, .b-link *, button *, [data-tab-switch] *, .b-js-link * {
+    cursor: inherit;
+}
+
+/* Блоки, куда Shikimori вставляет ссылки, но которые сами ссылкой
+   не являются (список аниме/манги, график активности, списки задач):
+   им тоже даём курсор-картинку. */
+.b-stats_bar,
+.b-stats_bar .bar,
+.b-stats_bar .stat_names,
+.b-stats_bar .stat_names .stat_name,
+.profile-content .cc-2.block .c-left .activity,
+.profile-content .cc-2.block .c-left .activity .graph,
+.profile-content .cc-2.block .c-left .activity .graph .bar-container,
+.profile-content .cc-2.block .c-left .activity .graph .bar {
+    cursor: var(--cursor-pointer);
+}
+
 
 /* --- 3. БАЗОВАЯ РАСКЛАДКА --- */
 
