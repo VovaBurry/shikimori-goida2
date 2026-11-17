@@ -115,18 +115,23 @@ a, .b-link, button, [data-tab-switch], .b-js-link {
 
 /* --- 2.1. КУРСОР НА ИНТЕРАКТИВНЫХ БЛОКАХ ---
 
-   Курсор из темы держится только там, где тема его сама поставила:
-   ссылки, кнопки, табы. На наведении карточки получают border и
-   filter: drop-shadow - браузер создаёт новый слой отрисовки и на
-   вложенных спанах/полосках сам подставляет свой "text/pointer".
-   Явно отдаём наследование внутри ссылок, чтобы картинка не слетала. */
-a *, .b-link *, button *, [data-tab-switch] *, .b-js-link * {
-    cursor: inherit;
+   Курсор из темы задаём универсальным правилом сразу после body:
+   страница Shikimori держится на UA-стилях и подставляет свой
+   "text/pointer" на заголовках, спанах, полосках и столбиках, а
+   наведение добавляет border и filter: drop-shadow - новый слой
+   отрисовки, где картинка тоже слетала. Universal-селектор
+   снимает это разом на всех потомках. */
+body,
+body *,
+body *::before,
+body *::after {
+    cursor: var(--cursor-default);
 }
 
-/* Блоки, куда Shikimori вставляет ссылки, но которые сами ссылкой
-   не являются (список аниме/манги, график активности, списки задач):
-   им тоже даём курсор-картинку. */
+/* кликабельное - курсор-указатель из темы */
+a, .b-link, button, [data-tab-switch], .b-js-link,
+summary, label, [role="button"],
+input[type="submit"], input[type="button"], input[type="checkbox"], input[type="radio"],
 .b-stats_bar,
 .b-stats_bar .bar,
 .b-stats_bar .stat_names,
@@ -134,8 +139,15 @@ a *, .b-link *, button *, [data-tab-switch] *, .b-js-link * {
 .profile-content .cc-2.block .c-left .activity,
 .profile-content .cc-2.block .c-left .activity .graph,
 .profile-content .cc-2.block .c-left .activity .graph .bar-container,
-.profile-content .cc-2.block .c-left .activity .graph .bar {
+.profile-content .cc-2.block .c-left .activity .graph .bar,
+a *, .b-link *, button *, [data-tab-switch] *, .b-js-link * {
     cursor: var(--cursor-pointer);
+}
+
+/* текст, где браузер по умолчанию показал бы текстовый курсор */
+input[type="text"], input[type="search"], input:not([type]), textarea,
+[contenteditable="true"] {
+    cursor: text;
 }
 
 
