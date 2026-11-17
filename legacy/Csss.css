@@ -1,0 +1,452 @@
+/* AUTO=page_border */ 
+.l-page:before, .l-page:after, .l-footer:before, .l-footer:after { display: block; }
+
+/* AUTO=body_background */ body { 
+background:url(http://i85.fastpic.ru/big/2016/1204/48/63a6492ac099d29d425337e963780a48.jpg) fixed no-repeat bottom #EEE3E4;
+background-size: 115% auto;
+font-family: Segoe UI Medium, sans serif; font-size: 11px; color:#c50505;}
+
+/* AUTO=page_background_color */
+.l-page { background:url(http://i82.fastpic.ru/big/2016/1203/cc/5611012fcf58b17759b388b78e3247cc.jpg); padding: 43px;
+}
+
+header.head h1, header.head h2 {
+font: 23px Segoe UI Medium, verdana, arial, sans-serif; color: #797985;
+}
+
+.to-top-fix, .l-top_menu {
+background: #f14b45;
+}
+
+.l-top_menu {
+border-bottom: 2px solid #eee3e4;
+position: fixed;
+z-index: 10;
+width: 100%;
+}
+
+.to-top-fix {
+border-bottom: 2px solid #eee3e4;
+}
+
+.b-feedback {
+visibility: hidden;
+}
+
+.l-top_menu .submenu > .entry {
+color: #ff0b00;
+cursor: pointer;
+display: block;
+font-family: Segoe UI Medium;
+font-size: 11px;
+height: 21px;
+line-height: 22px; 
+min-width: 80px; 
+background: #eee3e4;
+padding: 0px 1px;
+border: 0px solid #f14b45;
+}
+
+.l-top_menu .submenu {
+border: 0px solid #eee3e4;
+}
+
+.l-top_menu .submenu>.entry.active {
+background: #f7c2c7;
+cursor: inherit;
+}
+
+.menu .unread-count, .menu .contest {
+background: #f14b45 !important;
+}
+
+.b-main_search ul.popup li {
+border-bottom: 0px solid #f14b45; 
+color: #ff0b00;
+font-family: Segoe UI Medium;
+font-size: 11px;
+line-height: 22px;
+background: #eee3e4;
+padding: 0 5px 0 8px;
+width: 172px;
+}
+
+.b-main_search ul.popup {
+border: 0px solid #f14b45;
+}
+
+.b-main_search .popup li.active {
+background-color: #f7c2c7;
+cursor: inherit;
+}
+
+.headline, .midheadline, .subheadline {
+background: rgba(0, 0, 0, 0);
+border-left: 3px solid #eee3e4;
+border-radius: 10px;
+background-color: #eee3e4;
+}
+
+.subheadline {
+font-size: 14px;
+padding: 6px 10px 4px 8px;
+line-height: 12px; color: #ff0b00;
+}
+
+.b-stats_bar.anime .bar .first {
+background: #f28e8b;
+border-radius: 2px;
+}
+
+.b-stats_bar.manga .bar .first {
+background: #febbb8;
+border-radius: 2px;
+}
+
+.b-stats_bar .bar .first, .b-stats_bar .bar .second, .b-stats_bar .bar .third {
+color: #ffffff;
+}
+
+.b-stats_bar.anime .bar .second {
+background: #ffffff; 
+}
+
+.b-stats_bar.manga .bar .second {
+background: #ffffff;
+}
+
+.bar.vertical .line .bar-container .bar {
+bottom: 0;
+position: absolute;
+width: 50%;
+}
+
+.bar.simple .bar:hover.s0 {
+background: #faafaf;
+border-radius: 1px;
+}
+
+.bar.simple .bar.s0 {
+background: #f03c3c;
+border-radius: 1px;
+}
+
+.bar.simple .bar:hover.s1 {
+background: #e89999;
+border-radius: 1px;
+}
+
+.bar.simple .bar.s1 {
+background: #feb5b5;
+border-radius: 1px;
+}
+
+.bar.simple .bar:hover.s2 {
+background: #f03c3c;
+border-radius: 1px;
+}
+
+.bar.simple .bar.s2 {
+background: #faafaf;
+border-radius: 1px;
+}
+
+.bar.simple .bar:hover.s3 {
+background: #ce5858;
+border-radius: 1px;
+}
+
+.bar.simple .bar.s3 {
+background: #db8383;
+border-radius: 1px;
+}
+
+.b-stats_bar .bar .third {
+background: #ffffff;
+}
+
+.p-profiles .profile-head .c-history .entry img {
+float: left;
+margin: 2px 10px 5px 2px;
+max-height: 52px;
+max-width: 37px;
+filter: grayscale(100%); 
+}
+
+.b-club .logo {
+float: left;
+line-height: 0;
+margin-right: 10px;
+max-width: 100%;
+width: 48px;
+filter: grayscale(100%); 
+}
+
+.b-catalog_entry .cover .image-decor img {
+width: 100%;
+filter: grayscale(100%); 
+}
+
+.b-user.avatar img, .b-user.named_avatar img, .b-user.avatar_fixed_margin img {
+display: block;
+line-height: 0;
+margin: 0 auto;
+max-width: 100%;
+filter: grayscale(100%); 
+}
+
+.b-form .cancel+input {
+margin-left: 0;
+background:#ce5858;
+}
+
+input[type=submit] {
+background:#ce5858;
+}
+
+input[type=submit]:hover {
+background:#ce5858;
+}
+
+.button:hover {
+background: #ce5858;
+}
+
+.button {
+background:#ce5858;
+}
+
+.b-comments-notifier {
+background:#ffffff;
+color:red;
+}
+
+.b-comments-notifier:hover {
+background:#ce5858;
+color:white;
+}
+
+.subheadline>a {color: #ff0b00;
+.midheadline>a
+}
+
+.p-profiles .profile-head .c-info .c-additionals div a {
+transition: color, 0.2s;
+color: #5a5a5a;
+cursor: pointer;
+}
+
+.p-profiles .profile-head .c-info .c-lists-info .b-stats_bar .compatibility a {
+transition: color, 0.2s;
+color: #5a5a5a;
+cursor: pointer;
+}
+
+.b-tooltipped:not(a) {
+border-bottom: 1px dashed #5a5a5a;
+cursor: default;
+display: inline-block;
+line-height: 1.1;
+}
+
+.p-profiles .profile-head .c-brief header .notice a {
+transition: color, 0.2s;
+color: #857979;
+cursor: pointer;
+padding: 0;
+}
+
+.p-profiles-show .about a {
+color: #e6947c;
+cursor: pointer;
+}
+
+.b-tooltipped:not(a) {
+border-bottom: 1px dashed #ffffff;
+}
+
+.b-link {
+color: #bb4b4b;
+cursor: pointer;
+}
+
+header.head h1 a.back, header.head h2 a.back {
+color: #ff0000;
+display: inline-block;
+font-size: 24px;
+margin-left: -5px;
+position: relative;
+width: 40px;
+}
+
+img {
+border-radius: 6px;
+}
+
+.p-profiles .profile-head .c-history .entry .title {
+white-space: nowrap;
+font-size: 14px;
+font-weight: bold;
+line-height: 19px;
+color: #313131;
+}
+
+.b-message>.inner header .name-date a.name {
+color: #710000;
+cursor: pointer;
+font-weight: bold;
+}
+
+.b-stats_bar a.title {
+color: #645f5f;
+cursor: pointer;
+}
+
+.b-spoiler .content .inner, .b-spoiler .content .inner-prgrph {
+border-bottom: 1px dashed #ffffff;
+display: inline;
+}
+
+.b-spoiler .content:hover .before, .b-spoiler .content:hover .after {
+color: #ff0000;
+}
+
+.b-spoiler .content .before, .b-spoiler .content .after {
+color: #ffffff;
+cursor: pointer;
+display: inline;
+font-size: 10px;
+letter-spacing: 0.8px;
+}
+
+.b-spoiler label {
+color: #ffffff;
+cursor: pointer;
+border-bottom-style: dashed;
+border-bottom-width: 1px;
+font-size: 12px;
+letter-spacing: 0.5px;
+}
+
+.b-quote {
+background: #f9f9f9;
+border: 1px dashed #dc7d7d;
+color: #989898;
+font-style: italic;
+margin: 5px 0 5px 5px;
+overflow: hidden;
+padding: 5px 10px;
+}
+
+.b-shiki_editor footer .about-bb_codes {
+color: #ff0000;
+cursor: pointer;
+float: right;
+margin-top: 4px;
+font-size: 11px;
+line-height: 1.2;
+}
+
+.b-form .cancel {
+color: #000000;
+cursor: pointer;
+display: inline;
+margin-left: 20px;
+}
+
+.l-top_menu .inner .logo {
+background: url(http://i85.fastpic.ru/big/2016/1204/05/319215a6480df83b71f4ec5141552305.png) no-repeat;
+float: left;
+height: 34px;
+margin: -3px 30px 0 -33px;
+position: absolute;
+width: 172px;
+z-index: 2;
+}
+
+/* ВРЕМЯ ЗА АНИМЕ И МАНГОЙ */
+.p-profiles-show .lifetime .times .time.checked:before { 
+color: #000000; 
+content: ""; 
+font-family: "shikimori"; 
+font-size: 8px; 
+margin-right: 4px; 
+}
+/*время за аниме законч*/
+
+.p-user_rates-index .list-lines tr td .rewatches {
+color: #ff0000;
+font-size: 12px;
+}
+
+.p-user_rates-index .list-lines tr .name a {
+color: #0e0000;
+}
+
+.b-options-floated a, .b-options-floated .link {
+color: #717171;
+cursor: pointer;
+cursor: pointer;
+display: inline;
+}
+
+.b-options-floated .action {
+color: #eee3e4;
+border-bottom: 1px dotted rgb(238, 227, 228);
+display: inline-block;
+line-height: 1;
+transition: color, 0.2s;
+cursor: pointer;
+}
+
+.b-main_search .popup li:hover {
+background:#f02a23;
+color: #eee3e4;
+}
+
+.l-top_menu .submenu>.entry:hover {
+background: #f02a23;
+color: #eee3e4;
+} 
+
+.l-top_menu .menu-items>.entry>a {
+color: inherit;
+background: #f14b45;
+display: inline-block;
+font-size: 12px;
+line-height: 27px;
+padding: 4px 10px 0;
+}
+
+.p-profiles header.head .misc {
+font-size: 0
+}
+
+/*всплывает при наведении на персов*/
+div.tooltip-inner {
+background:url(http://i82.fastpic.ru/big/2016/1203/cc/5611012fcf58b17759b388b78e3247cc.jpg);
+}
+
+/*всплывашка*/
+.b-catalog_entry-tooltip .inner .text {color: #494949} /*текст описания*/
+.b-catalog_entry-tooltip .inner .line .value .tag {color: #863131; }
+/*текстссылок} типа "продюссер", "жанры" и тп.*/
+
+/*буковки*/
+.b-catalog_entry-tooltip .inner .text {
+color: #433f3f; 
+}
+
+.b-table tr:hover { 
+background-color: #fee6e6 !important;
+}
+
+/*фон галочки*/
+.l-top_menu .menu-items>.entry.selected, .l-top_menu .menu-items>.entry:hover {
+background-color: #f14b45;
+}
+
+/*сама галочка там под галочкой*/
+.menu .unread-count:hover, .menu .contest:hover {
+background: #f14b45!important;
+}

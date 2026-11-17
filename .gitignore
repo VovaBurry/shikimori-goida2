@@ -1,0 +1,10 @@
+# Windows / редакторы
+Thumbs.db
+desktop.ini
+.DS_Store
+.vscode/
+.idea/
+
+# Временные файлы сборки
+tools/_check.js
+*.log

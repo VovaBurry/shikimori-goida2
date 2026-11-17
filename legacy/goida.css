@@ -1,0 +1,1053 @@
+/* ============================================
+   GOIDA.CSS - Объединённая тема для Shikimori
+   ============================================ */
+
+/* --- 1. ФОН --- */
+/* AUTO=body_background */
+body {
+    background: url(https://raw.githubusercontent.com/TopPelemeshka/shikimori-teto-theme/main/assets/background.png) repeat;
+}
+
+/* --- 2. ОБЩИЕ НАСТРОЙКИ И ПЕРЕМЕННЫЕ --- */
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Oswald:wght@700&display=swap');
+
+:root {
+    --bg-main: #F8F7F9;
+    --bg-content: #FFFFFF;
+    --text-main: #4A4A4A;
+    --accent-red: #D84C51;
+    --accent-gold: #D3C0A3;
+    --border-color: #EAEAEA;
+    --font-main: 'Lato', sans-serif;
+    --font-headers: 'Oswald', sans-serif;
+}
+
+/* --- 3. БАЗОВЫЕ СТИЛИ --- */
+
+body {
+    background-color: var(--bg-main);
+    font-family: var(--font-main);
+    color: var(--text-main);
+}
+
+a, .b-link, button, [data-tab-switch], .b-js-link {
+    transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.l-page {
+    background: var(--bg-content);
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* --- 5. ТЕТО В УГЛУ СТРАНИЦЫ --- */
+
+.p-profiles-show .b-feedback::after {
+    content: "";
+    display: block;
+    position: fixed;
+    width: 200px;
+    height: 459px;
+    right: 20px;
+    bottom: 0;
+    background: url("https://raw.githubusercontent.com/TopPelemeshka/shikimori-teto-theme/main/assets/teto-corner.webp") no-repeat bottom right;
+    background-size: contain;
+    z-index: 999;
+    pointer-events: none;
+    animation: breathing 4s ease-in-out infinite;
+}
+
+@keyframes breathing {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+/* --- 6. ОФОРМЛЕНИЕ ПРОФИЛЯ --- */
+
+.profile-head {
+    margin-top: 0 !important;
+    padding-bottom: 20px;
+}
+
+.p-profiles-show .profile-head:before {
+    content: "";
+    display: block;
+    height: 300px;
+    background: url("https://raw.githubusercontent.com/TopPelemeshka/shikimori-teto-theme/main/assets/profile-cover.png") no-repeat center center;
+    background-size: cover; 
+    margin: -25px -25px 25px -25px;
+    border-radius: 8px 8px 0 0;
+}
+
+.p-profiles .profile-head .c-brief .avatar {
+    position: relative;
+    width: 180px !important;
+    margin-bottom: 50px;
+    border: none;
+    background: none;
+}
+.p-profiles .profile-head .c-brief .avatar::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    background: url("https://raw.githubusercontent.com/TopPelemeshka/shikimori-teto-theme/main/assets/avatar.gif") center / cover;
+    border-radius: 28px;
+    border: 4px solid var(--border-color);
+    transition: border-color 0.3s ease;
+}
+.p-profiles .profile-head .c-brief .avatar:hover::before {
+    border-color: var(--accent-red);
+}
+.p-profiles .profile-head .avatar img {
+    opacity: 0;
+}
+.p-profiles .profile-head .c-brief .avatar .profile-actions {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    position: absolute;
+    width: 100%;
+    bottom: -40px;
+    left: 0;
+}
+.p-profiles .profile-head .c-brief .avatar .profile-actions a {
+    font-size: 20px;
+}
+
+.p-profiles .profile-head .c-brief header h1 {
+    font-family: var(--font-headers);
+    font-size: 2.5em;
+    color: var(--text-main);
+    transition: color 0.3s ease;
+}
+.p-profiles .profile-head .c-brief header h1:hover {
+    color: var(--accent-red);
+}
+.p-profiles .profile-head .c-brief header h1::after {
+    content: '▼';
+    display: inline-block;
+    margin-left: 15px;
+    color: var(--accent-red);
+    font-size: 0.7em;
+    animation: rotateDrill 5s linear infinite;
+}
+@keyframes rotateDrill {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.p-profiles-show .profile-head .c-brief header.head .misc {
+    position: relative;
+}
+.p-profiles-show .profile-head .c-brief header.head .misc span {
+    font-size: 0 !important;
+    visibility: hidden;
+}
+.p-profiles-show .profile-head .c-brief header.head .misc::after {
+    content: "De-throning the blue one."; 
+    font-size: 11px !important;
+    font-style: italic;
+    color: var(--text-main);
+    position: absolute;
+    left: 0;
+    top: 0;
+    white-space: nowrap;
+}
+
+/* --- 7. СТИЛИЗАЦИЯ ЭЛЕМЕНТОВ ИНТЕРФЕЙСА --- */
+
+.headline, .midheadline, .subheadline {
+    font-family: var(--font-headers);
+    color: var(--accent-red);
+    background: none;
+    border: none;
+    padding-bottom: 8px;
+    margin-bottom: 15px;
+    border-bottom: 2px solid var(--border-color);
+    text-transform: uppercase;
+}
+.headline > a, .midheadline > a, .subheadline > a {
+    color: var(--accent-red) !important;
+}
+.headline > a:hover, .midheadline > a:hover, .subheadline > a:hover {
+    color: var(--text-main) !important;
+}
+
+a, .b-link {
+    color: var(--accent-red);
+    text-decoration: none;
+}
+a:hover, .b-link:hover {
+    text-decoration: underline;
+}
+
+ul, .b-list {
+    list-style-type: none !important;
+    padding-left: 20px !important;
+}
+ul li, .b-list li {
+    padding-left: 10px;
+    position: relative;
+}
+ul li::before, .b-list li::before {
+    content: '▼';
+    color: var(--accent-red);
+    font-size: 10px;
+    position: absolute;
+    left: -10px;
+    top: 5px;
+    display: inline-block;
+    transform: rotate(-90deg);
+}
+
+.b-stats_bar.anime .bar .first, .b-stats_bar.manga .bar .first {
+    background: var(--accent-red);
+}
+.b-stats_bar.anime .bar .second, .b-stats_bar.manga .bar .second {
+    background: var(--text-main);
+}
+.b-stats_bar.anime .bar .third, .b-stats_bar.manga .bar .third {
+    background: var(--accent-gold);
+}
+
+.block, .b-topic, .b-db_entry, .history-page>div, .b-form {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+.l-content > .block, .l-menu > .block, .l-content > .b-topic, .l-menu > .b-topic {
+    padding: 0;
+}
+.profile-content .cc-2.block .c-left .activity,
+.profile-content .cc-2.block .c-left .lifetime {
+    background: 0 0;
+    border: 1px var(--headline-background-color, #e8ebef) solid;
+    border-radius: 13px;
+    -webkit-transition: border 1s cubic-bezier(.26,.01,0,.99), background-color .7s cubic-bezier(.31,0,0,.96), box-shadow 1s cubic-bezier(.26,.01,0,.99), border .4s linear;
+    transition: box-shadow 1s cubic-bezier(.26,.01,0,.99), border 1s cubic-bezier(.26,.01,0,.99), background-color .7s cubic-bezier(.31,0,0,.96), border .4s linear;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    background-clip: padding-box;
+    margin: 0 !important;
+    padding: 8px;
+    display: grid;
+    grid-template-rows: auto minmax(100px, 1fr);
+    gap: 4px;
+    padding-bottom: 27px;
+}
+.profile-content .cc-2.block .c-left .activity:hover,
+.profile-content .cc-2.block .c-left .lifetime:hover {
+    -webkit-box-shadow: inset 2px 2px 5px rgba(154,147,140,.5), 1px 1px 5px #fff;
+    box-shadow: inset 2px 2px 5px rgba(154,147,140,.5), 1px 1px 5px #fff;
+    background: #ececec;
+    border: 1px transparent solid;
+}
+.profile-content .cc-2.block .c-left .activity:hover .graph,
+.profile-content .cc-2.block .c-left .lifetime:hover .bar {
+    -webkit-filter: drop-shadow(2px 2px 2px rgba(154,147,140,.307));
+    filter: drop-shadow(2px 2px 2px rgba(154,147,140,.307));
+    -webkit-transition: -webkit-filter .3s cubic-bezier(.25,.8,.25,1);
+    transition: filter .3s cubic-bezier(.25,.8,.25,1), -webkit-filter .3s cubic-bezier(.25,.8,.25,1);
+}
+.profile-content .cc-2.block .c-left .activity:hover .title,
+.profile-content .cc-2.block .c-left .lifetime:hover .label {
+    background: linear-gradient(to right, #b347bb 0, #9a5fbe 6.25%, #9b5ebe 12.5%, #688ec4 18.75%, #5c9cc8 25%, #51a8ca 31.25%, #44b5cb 37.5%, #32c8cf 43.75%, #32c8cf 50%, #44b5cb 56.25%, #51a8ca 62.5%, #5c9cc8 68.75%, #688ec4 75%, #9b5ebe 81.25%, #9a5fbe 87.5%, #b347bb 100%) 0 center/400% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-animation: slide 4s linear 0s infinite forwards;
+    animation: slide 4s linear 0s infinite forwards;
+}
+
+.b-button, input[type="submit"] {
+    background: var(--bg-main);
+    border: 2px solid var(--border-color);
+    color: var(--text-main);
+    border-radius: 6px;
+    font-family: var(--font-headers);
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+}
+.b-button:hover, input[type="submit"]:hover {
+    background: var(--accent-red);
+    border-color: var(--accent-red);
+    color: white;
+}
+
+.b-spoiler_block > span {
+    background-color: var(--accent-gold);
+    color: white;
+}
+.b-spoiler_block > div {
+    background-color: #fdfaf5;
+    border-left-color: var(--accent-gold);
+}
+
+/* --- 8. АКТИВНОСТЬ И LIFETIME --- */
+
+@-webkit-keyframes slide {
+    to { background-position-x: 400% }
+}
+@keyframes slide {
+    to { background-position-x: 400% }
+}
+@-webkit-keyframes slide-pg-achievements {
+    0% { background-position-x: 0 }
+    to { background-position-x: 113.1370849898px }
+}
+@keyframes slide-pg-achievements {
+    0% { background-position-x: 0 }
+    to { background-position-x: 113.1370849898px }
+}
+@-webkit-keyframes slide-pg-lifetime {
+    0% { background-position-x: 0 }
+    to { background-position-x: 113.1370849898px }
+}
+@keyframes slide-pg-lifetime {
+    0% { background-position-x: 0 }
+    to { background-position-x: 113.1370849898px }
+}
+@-webkit-keyframes resize-26 {
+    0%, 19.2307692308%, to { -webkit-transform: translate(-50%,-50%) scale(.5); transform: translate(-50%,-50%) scale(.5) }
+    9.6153846154% { -webkit-transform: translate(-50%,-50%) scale(.7); transform: translate(-50%,-50%) scale(.7) }
+}
+@keyframes resize-26 {
+    0%, 19.2307692308%, to { -webkit-transform: translate(-50%,-50%) scale(.5); transform: translate(-50%,-50%) scale(.5) }
+    9.6153846154% { -webkit-transform: translate(-50%,-50%) scale(.7); transform: translate(-50%,-50%) scale(.7) }
+}
+@-webkit-keyframes resize-34 {
+    0%, 14.7058823529%, to { -webkit-transform: translate(-50%,-50%) scale(.5); transform: translate(-50%,-50%) scale(.5) }
+    7.3529411765% { -webkit-transform: translate(-50%,-50%) scale(.7); transform: translate(-50%,-50%) scale(.7) }
+}
+@keyframes resize-34 {
+    0%, 14.7058823529%, to { -webkit-transform: translate(-50%,-50%) scale(.5); transform: translate(-50%,-50%) scale(.5) }
+    7.3529411765% { -webkit-transform: translate(-50%,-50%) scale(.7); transform: translate(-50%,-50%) scale(.7) }
+}
+
+.profile-content .cc-2.block .c-left .lifetime {
+    padding: 8px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    gap: 4px;
+    -ms-flex-line-pack: center;
+    align-content: center;
+}
+.profile-content .cc-2.block .c-left .lifetime .bar {
+    height: 12px;
+    line-height: 12px;
+    background: #d4d4d4;
+    overflow: hidden;
+}
+.profile-content .cc-2.block .c-left .lifetime .bar .first {
+    z-index: 10;
+    overflow: hidden;
+    position: relative;
+}
+.profile-content .cc-2.block .c-left .lifetime .bar .first::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 678.8225099391px;
+    background-image: repeating-linear-gradient(135deg, transparent, transparent 40px, #f45151 40px, #f45151 80px);
+    -webkit-animation: slide-pg-lifetime 4s linear infinite;
+    animation: slide-pg-lifetime 4s linear infinite;
+    will-change: background-position;
+    background-color: #cf4e4e;
+}
+.profile-content .cc-2.block .c-left .lifetime .cuts .cut {
+    height: 12px;
+    z-index: 2;
+    width: 3px;
+    background: rgba(157,162,168,.2274509804);
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+.profile-content .cc-2.block .c-left .lifetime,
+.profile-content .cc-2.block .c-left .lifetime .times {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+.profile-content .cc-2.block .c-left .lifetime .title .value {
+    display: inline-block;
+    background: linear-gradient(to right, #b347bb 0, #9a5fbe 6.25%, #9b5ebe 12.5%, #688ec4 18.75%, #5c9cc8 25%, #51a8ca 31.25%, #44b5cb 37.5%, #32c8cf 43.75%, #32c8cf 50%, #44b5cb 56.25%, #51a8ca 62.5%, #5c9cc8 68.75%, #688ec4 75%, #9b5ebe 81.25%, #9a5fbe 87.5%, #b347bb 100%) 0 center/400% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-animation: slide 4s linear 0s infinite forwards;
+    animation: slide 4s linear 0s infinite forwards;
+}
+.profile-content .cc-2.block .c-left .lifetime .title .label {
+    display: block;
+    color: #888;
+    font-size: 11px;
+    margin-top: 4px;
+}
+
+.profile-content .cc-2.block .c-left .activity .graph .line {
+    overflow: visible;
+}
+@supports selector(:has(*)) {
+    .profile-content .cc-2.block .c-left .activity .graph:has(.bar-container:hover) .bar::after {
+        -webkit-animation: none !important;
+        animation: none !important;
+    }
+}
+
+.profile-content .cc-2.block .c-left .activity .graph .bar-container:hover .bar .value {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+    opacity: 1;
+    -webkit-transition: opacity .2s ease-in-out .2s;
+    transition: opacity .2s ease-in-out .2s;
+}
+.profile-content .cc-2.block .c-left .activity .graph .bar .value {
+    position: absolute !important;
+    left: 50%;
+    top: 0;
+    bottom: unset !important;
+    z-index: 2;
+    -webkit-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+    width: 95% !important;
+    height: auto;
+    aspect-ratio: 1/1;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    color: #fff !important;
+    opacity: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-transition: none;
+    transition: none;
+}
+.profile-content .cc-2.block .c-left .activity .graph .bar .value.narrow,
+.profile-content .cc-2.block .c-left .activity .graph .bar .value.mini {
+    font-size: 10px;
+    font-weight: bold;
+}
+
+.profile-content .cc-2.block .c-left .activity .graph .bar::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 0;
+    width: 95%;
+    aspect-ratio: 1/1;
+    background: #98c2e3;
+    border-radius: 100%;
+    -webkit-transform: translate(-50%,-50%) scale(.5);
+    -ms-transform: translate(-50%,-50%) scale(.5);
+    transform: translate(-50%,-50%) scale(.5);
+    -webkit-transition: background .2s ease-in-out, -webkit-transform .2s ease-in-out;
+    transition: transform .2s ease-in-out, background .2s ease-in-out;
+    transition: transform .2s ease-in-out, background .2s ease-in-out, -webkit-transform .2s ease-in-out;
+}
+.profile-content .cc-2.block .c-left .activity .graph .bar.s0::after,
+.profile-content .cc-2.block .c-left .activity .graph .bar.s0::before {
+    background: #4682b4;
+}
+.profile-content .cc-2.block .c-left .activity .graph .bar.s1::after,
+.profile-content .cc-2.block .c-left .activity .graph .bar.s1::before {
+    background: #6295bd;
+}
+.profile-content .cc-2.block .c-left .activity .graph .bar.s2::after,
+.profile-content .cc-2.block .c-left .activity .graph .bar.s2::before {
+    background: #79a9cf;
+}
+.profile-content .cc-2.block .c-left .activity .graph .bar.s3::after,
+.profile-content .cc-2.block .c-left .activity .graph .bar.s3::before {
+    background: #98c2e3;
+}
+.profile-content .cc-2.block .c-left .activity .graph .bar-container:hover .bar.s0::after,
+.profile-content .cc-2.block .c-left .activity .graph .bar-container:hover .bar.s0::before {
+    background: #6295bd;
+}
+.profile-content .cc-2.block .c-left .activity .graph .bar-container:hover .bar.s1::after,
+.profile-content .cc-2.block .c-left .activity .graph .bar-container:hover .bar.s1::before {
+    background: #79a9cf;
+}
+.profile-content .cc-2.block .c-left .activity .graph .bar-container:hover .bar.s2::after,
+.profile-content .cc-2.block .c-left .activity .graph .bar-container:hover .bar.s2::before {
+    background: #98c2e3;
+}
+.profile-content .cc-2.block .c-left .activity .graph .bar-container:hover .bar.s3::after,
+.profile-content .cc-2.block .c-left .activity .graph .bar-container:hover .bar.s3::before {
+    background: #b3d7f2;
+}
+.profile-content .cc-2.block .c-left .activity .graph .bar-container:hover .bar {
+    background: #b3d7f2;
+    -webkit-transform: translate(-50%,-50%) scale(1) !important;
+    -ms-transform: translate(-50%,-50%) scale(1) !important;
+    transform: translate(-50%,-50%) scale(1) !important;
+}
+
+.profile-content .cc-2.block .c-left .activity .graph.x26 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+.profile-content .cc-2.block .c-left .activity .graph.x26 .line:nth-child(1) .bar-container .bar::after,
+.profile-content .cc-2.block .c-left .activity .graph.x26 .line:nth-child(2) .bar-container .bar::after {
+    -webkit-animation: resize-26 ease-in-out;
+    animation: resize-26 ease-in-out;
+    -webkit-animation-delay: 0s;
+    animation-delay: 0s;
+    -webkit-animation-duration: 5.2s;
+    animation-duration: 5.2s;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    will-change: transform;
+}
+.profile-content .cc-2.block .c-left .activity .graph.x26 .line:nth-child(2) .bar-container .bar::after {
+    -webkit-animation-delay: .2s;
+    animation-delay: .2s;
+}
+.profile-content .cc-2.block .c-left .activity .graph.x26 .line:nth-child(3) .bar-container .bar::after,
+.profile-content .cc-2.block .c-left .activity .graph.x26 .line:nth-child(4) .bar-container .bar::after,
+.profile-content .cc-2.block .c-left .activity .graph.x26 .line:nth-child(5) .bar-container .bar::after {
+    -webkit-animation: resize-26 ease-in-out;
+    animation: resize-26 ease-in-out;
+    -webkit-animation-delay: .4s;
+    animation-delay: .4s;
+    -webkit-animation-duration: 5.2s;
+    animation-duration: 5.2s;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    will-change: transform;
+}
+.profile-content .cc-2.block .c-left .activity .graph.x26 .line:nth-child(4) .bar-container .bar::after,
+.profile-content .cc-2.block .c-left .activity .graph.x26 .line:nth-child(5) .bar-container .bar::after {
+    -webkit-animation-delay: .6s;
+    animation-delay: .6s;
+}
+.profile-content .cc-2.block .c-left .activity .graph.x26 .line:nth-child(5) .bar-container .bar::after {
+    -webkit-animation-delay: .8s;
+    animation-delay: .8s;
+}
+.profile-content .cc-2.block .c-left .activity .graph.x26 .line:nth-child(6) .bar-container .bar::after,
+.profile-content .cc-2.block .c-left .activity .graph.x26 .line:nth-child(7) .bar-container .bar::after,
+.profile-content .cc-2.block .c-left .activity .graph.x26 .line:nth-child(8) .bar-container .bar::after {
+    -webkit-animation: resize-26 ease-in-out;
+    animation: resize-26 ease-in-out;
+    -webkit-animation-delay: 1s;
+    animation-delay: 1s;
+    -webkit-animation-duration: 5.2s;
+    animation-duration: 5.2s;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    will-change: transform;
+}
+.profile-content .cc-2.block .c-left .activity .graph.x26 .line:nth-child(7) .bar-container .bar::after,
+.profile-content .cc-2.block .c-left .activity .graph.x26 .line:nth-child(8) .bar-container .bar::after {
+    -webkit-animation-delay: 1.2s;
+    animation-delay: 1.2s;
+}
+.profile-content .cc-2.block .c-left .activity .graph.x26 .line:nth-child(8) .bar-container .bar::after {
+    -webkit-animation-delay: 1.4s;
+    animation-delay: 1.4s;
+}
+.profile-content .cc-2.block .c-left .activity .graph.x26 .line:nth-child(9) .bar-container .bar::after,
+.profile-content .cc-2.block .c-left .activity .graph.x26 .line:nth-child(10) .bar-container .bar::after,
+.profile-content .cc-2.block .c-left .activity .graph.x26 .line:nth-child(11) .bar-container .bar::after {
+    -webkit-animation: resize-26 ease-in-out;
+    animation: resize-26 ease-in-out;
+    -webkit-animation-delay: 1.6s;
+    animation-delay: 1.6s;
+    -webkit-animation-duration: 5.2s;
+    animation-duration: 5.2s;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    will-change: transform;
+}
+.profile-content .cc-2.block .c-left .activity .graph.x26 .line:nth-child(10) .bar-container .bar::after,
+.profile-content .cc-2.block .c-left .activity .graph.x26 .line:nth-child(11) .bar-container .bar::after {
+    -webkit-animation-delay: 1.8s;
+    animation-delay: 1.8s;
+}
+.profile-content .cc-2.block .c-left .activity .graph.x26 .line:nth-child(11) .bar-container .bar::after {
+    -webkit-animation-delay: 2s;
+    animation-delay: 2s;
+}
+.profile-content .cc-2.block .c-left .activity .graph.x26 .line:nth-child(12) .bar-container .bar::after,
+.profile-content .cc-2.block .c-left .activity .graph.x26 .line:nth-child(13) .bar-container .bar::after,
+.profile-content .cc-2.block .c-left .activity .graph.x26 .line:nth-child(14) .bar-container .bar::after {
+    -webkit-animation: resize-26 ease-in-out;
+    animation: resize-26 ease-in-out;
+    -webkit-animation-delay: 2.2s;
+    animation-delay: 2.2s;
+    -webkit-animation-duration: 5.2s;
+    animation-duration: 5.2s;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    will-change: transform;
+}
+.profile-content .cc-2.block .c-left .activity .graph.x26 .line:nth-child(13) .bar-container .bar::after,
+.profile-content .cc-2.block .c-left .activity .graph.x26 .line:nth-child(14) .bar-container .bar::after {
+    -webkit-animation-delay: 2.4s;
+    animation-delay: 2.4s;
+}
+.profile-content .cc-2.block .c-left .activity .graph.x26 .line:nth-child(14) .bar-container .bar::after {
+    -webkit-animation-delay: 2.6s;
+    animation-delay: 2.6s;
+}
+.profile-content .cc-2.block .c-left .activity .graph.x26 .line:nth-child(15) .bar-container .bar::after,
+.profile-content .cc-2.block .c-left .activity .graph.x26 .line:nth-child(16) .bar-container .bar::after,
+.profile-content .cc-2.block .c-left .activity .graph.x26 .line:nth-child(17) .bar-container .bar::after {
+    -webkit-animation: resize-26 ease-in-out;
+    animation: resize-26 ease-in-out;
+    -webkit-animation-delay: 2.8s;
+    animation-delay: 2.8s;
+    -webkit-animation-duration: 5.2s;
+    animation-duration: 5.2s;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    will-change: transform;
+}
+.profile-content .cc-2.block .c-left .activity .graph.x26 .line:nth-child(16) .bar-container .bar::after,
+.profile-content .cc-2.block .c-left .activity .graph.x26 .line:nth-child(17) .bar-container .bar::after {
+    -webkit-animation-delay: 3s;
+    animation-delay: 3s;
+}
+.profile-content .cc-2.block .c-left .activity .graph.x26 .line:nth-child(17) .bar-container .bar::after {
+    -webkit-animation-delay: 3.2s;
+    animation-delay: 3.2s;
+}
+.profile-content .cc-2.block .c-left .activity .graph.x26 .line:nth-child(18) .bar-container .bar::after,
+.profile-content .cc-2.block .c-left .activity .graph.x26 .line:nth-child(19) .bar-container .bar::after,
+.profile-content .cc-2.block .c-left .activity .graph.x26 .line:nth-child(20) .bar-container .bar::after {
+    -webkit-animation: resize-26 ease-in-out;
+    animation: resize-26 ease-in-out;
+    -webkit-animation-delay: 3.4s;
+    animation-delay: 3.4s;
+    -webkit-animation-duration: 5.2s;
+    animation-duration: 5.2s;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    will-change: transform;
+}
+.profile-content .cc-2.block .c-left .activity .graph.x26 .line:nth-child(19) .bar-container .bar::after,
+.profile-content .cc-2.block .c-left .activity .graph.x26 .line:nth-child(20) .bar-container .bar::after {
+    -webkit-animation-delay: 3.6s;
+    animation-delay: 3.6s;
+}
+.profile-content .cc-2.block .c-left .activity .graph.x26 .line:nth-child(20) .bar-container .bar::after {
+    -webkit-animation-delay: 3.8s;
+    animation-delay: 3.8s;
+}
+.profile-content .cc-2.block .c-left .activity .graph.x26 .line:nth-child(21) .bar-container .bar::after,
+.profile-content .cc-2.block .c-left .activity .graph.x26 .line:nth-child(22) .bar-container .bar::after,
+.profile-content .cc-2.block .c-left .activity .graph.x26 .line:nth-child(23) .bar-container .bar::after {
+    -webkit-animation: resize-26 ease-in-out;
+    animation: resize-26 ease-in-out;
+    -webkit-animation-delay: 4s;
+    animation-delay: 4s;
+    -webkit-animation-duration: 5.2s;
+    animation-duration: 5.2s;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    will-change: transform;
+}
+.profile-content .cc-2.block .c-left .activity .graph.x26 .line:nth-child(22) .bar-container .bar::after,
+.profile-content .cc-2.block .c-left .activity .graph.x26 .line:nth-child(23) .bar-container .bar::after {
+    -webkit-animation-delay: 4.2s;
+    animation-delay: 4.2s;
+}
+.profile-content .cc-2.block .c-left .activity .graph.x26 .line:nth-child(23) .bar-container .bar::after {
+    -webkit-animation-delay: 4.4s;
+    animation-delay: 4.4s;
+}
+.profile-content .cc-2.block .c-left .activity .graph.x26 .line:nth-child(24) .bar-container .bar::after,
+.profile-content .cc-2.block .c-left .activity .graph.x26 .line:nth-child(25) .bar-container .bar::after,
+.profile-content .cc-2.block .c-left .activity .graph.x26 .line:nth-child(26) .bar-container .bar::after {
+    -webkit-animation: resize-26 ease-in-out;
+    animation: resize-26 ease-in-out;
+    -webkit-animation-delay: 4.6s;
+    animation-delay: 4.6s;
+    -webkit-animation-duration: 5.2s;
+    animation-duration: 5.2s;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    will-change: transform;
+}
+.profile-content .cc-2.block .c-left .activity .graph.x26 .line:nth-child(25) .bar-container .bar::after,
+.profile-content .cc-2.block .c-left .activity .graph.x26 .line:nth-child(26) .bar-container .bar::after {
+    -webkit-animation-delay: 4.8s;
+    animation-delay: 4.8s;
+}
+.profile-content .cc-2.block .c-left .activity .graph.x26 .line:nth-child(26) .bar-container .bar::after {
+    -webkit-animation-delay: 5s;
+    animation-delay: 5s;
+}
+.profile-content .cc-2.block .c-left .activity .graph.x34 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+.profile-content .cc-2.block .c-left .activity .graph.x34 .line:nth-child(1) .bar-container .bar::after {
+    -webkit-animation: resize-34 ease-in-out;
+    animation: resize-34 ease-in-out;
+    -webkit-animation-delay: 0s;
+    animation-delay: 0s;
+    -webkit-animation-duration: 6.8s;
+    animation-duration: 6.8s;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    will-change: transform;
+}
+.profile-content .cc-2.block .c-left .activity .graph.x34 .line:nth-child(2) .bar-container .bar::after,
+.profile-content .cc-2.block .c-left .activity .graph.x34 .line:nth-child(3) .bar-container .bar::after,
+.profile-content .cc-2.block .c-left .activity .graph.x34 .line:nth-child(4) .bar-container .bar::after {
+    -webkit-animation: resize-34 ease-in-out;
+    animation: resize-34 ease-in-out;
+    -webkit-animation-delay: .2s;
+    animation-delay: .2s;
+    -webkit-animation-duration: 6.8s;
+    animation-duration: 6.8s;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    will-change: transform;
+}
+.profile-content .cc-2.block .c-left .activity .graph.x34 .line:nth-child(3) .bar-container .bar::after,
+.profile-content .cc-2.block .c-left .activity .graph.x34 .line:nth-child(4) .bar-container .bar::after {
+    -webkit-animation-delay: .4s;
+    animation-delay: .4s;
+}
+.profile-content .cc-2.block .c-left .activity .graph.x34 .line:nth-child(4) .bar-container .bar::after {
+    -webkit-animation-delay: .6s;
+    animation-delay: .6s;
+}
+.profile-content .cc-2.block .c-left .activity .graph.x34 .line:nth-child(5) .bar-container .bar::after,
+.profile-content .cc-2.block .c-left .activity .graph.x34 .line:nth-child(6) .bar-container .bar::after,
+.profile-content .cc-2.block .c-left .activity .graph.x34 .line:nth-child(7) .bar-container .bar::after {
+    -webkit-animation: resize-34 ease-in-out;
+    animation: resize-34 ease-in-out;
+    -webkit-animation-delay: .8s;
+    animation-delay: .8s;
+    -webkit-animation-duration: 6.8s;
+    animation-duration: 6.8s;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    will-change: transform;
+}
+.profile-content .cc-2.block .c-left .activity .graph.x34 .line:nth-child(6) .bar-container .bar::after,
+.profile-content .cc-2.block .c-left .activity .graph.x34 .line:nth-child(7) .bar-container .bar::after {
+    -webkit-animation-delay: 1s;
+    animation-delay: 1s;
+}
+.profile-content .cc-2.block .c-left .activity .graph.x34 .line:nth-child(7) .bar-container .bar::after {
+    -webkit-animation-delay: 1.2s;
+    animation-delay: 1.2s;
+}
+.profile-content .cc-2.block .c-left .activity .graph.x34 .line:nth-child(8) .bar-container .bar::after,
+.profile-content .cc-2.block .c-left .activity .graph.x34 .line:nth-child(9) .bar-container .bar::after,
+.profile-content .cc-2.block .c-left .activity .graph.x34 .line:nth-child(10) .bar-container .bar::after {
+    -webkit-animation: resize-34 ease-in-out;
+    animation: resize-34 ease-in-out;
+    -webkit-animation-delay: 1.4s;
+    animation-delay: 1.4s;
+    -webkit-animation-duration: 6.8s;
+    animation-duration: 6.8s;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    will-change: transform;
+}
+.profile-content .cc-2.block .c-left .activity .graph.x34 .line:nth-child(9) .bar-container .bar::after,
+.profile-content .cc-2.block .c-left .activity .graph.x34 .line:nth-child(10) .bar-container .bar::after {
+    -webkit-animation-delay: 1.6s;
+    animation-delay: 1.6s;
+}
+.profile-content .cc-2.block .c-left .activity .graph.x34 .line:nth-child(10) .bar-container .bar::after {
+    -webkit-animation-delay: 1.8s;
+    animation-delay: 1.8s;
+}
+.profile-content .cc-2.block .c-left .activity .graph.x34 .line:nth-child(11) .bar-container .bar::after,
+.profile-content .cc-2.block .c-left .activity .graph.x34 .line:nth-child(12) .bar-container .bar::after,
+.profile-content .cc-2.block .c-left .activity .graph.x34 .line:nth-child(13) .bar-container .bar::after {
+    -webkit-animation: resize-34 ease-in-out;
+    animation: resize-34 ease-in-out;
+    -webkit-animation-delay: 2s;
+    animation-delay: 2s;
+    -webkit-animation-duration: 6.8s;
+    animation-duration: 6.8s;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    will-change: transform;
+}
+.profile-content .cc-2.block .c-left .activity .graph.x34 .line:nth-child(12) .bar-container .bar::after,
+.profile-content .cc-2.block .c-left .activity .graph.x34 .line:nth-child(13) .bar-container .bar::after {
+    -webkit-animation-delay: 2.2s;
+    animation-delay: 2.2s;
+}
+
+/* --- 9. ВСПЛЫВАЮЩЕЕ МЕНЮ В ШАПКЕ (ИЗ pinky_style_blocked.css) --- */
+
+.l-top_menu .menu-items>.entry .submenu,
+.l-top_menu .menu-userbox>.entry .submenu,
+.l-top_menu .menu-search>.entry .popup,
+.l-top_menu .menu-items>.info .submenu {
+    opacity: 0;
+    border-radius: 3px;
+    transition: .3s ease;
+    transition-delay: .3s;
+    box-shadow: 0px 3px 10px 1px rgba(0,0,0,0.3);
+}
+
+.l-top_menu .menu-items>.entry:hover .submenu {
+    opacity: 1;
+    margin-top: 5px;
+    transition-delay: 0s;
+}
+
+.l-top_menu .menu-userbox>.entry:hover .submenu {
+    opacity: 1;
+    margin-top: 9px;
+    transition-delay: 0s;
+}
+
+.l-top_menu .menu-items>.info:hover .submenu {
+    opacity: 1;
+    margin-top: 7px;
+    transition-delay: 0s;
+}
+
+.l-top_menu .menu-search>.entry:hover .popup {
+    opacity: 1;
+    margin-top: 14px;
+    transition-delay: 0s;
+}
+
+.l-top_menu .submenu>.entry:active {
+    background: #f9a399;
+    color: #363636 !important;
+}
+
+.b-main_search .popup li:active {
+    background-color: #f9a399;
+}
+
+.l-top_menu .entry {
+    border-bottom: none;
+    line-height: 20px;
+    padding: 0 5px 0;
+}
+
+.l-top_menu .menu-userbox>.entry {
+    padding: 7px 0 4px 10px;
+    position: relative;
+    width: 47px !important;
+}
+
+.l-top_menu .menu-items {
+    margin-left: 159px !important;
+}
+
+.l-top_menu .inner .logo {
+    padding: .95rem 2px;
+    padding-left: 14px;
+    background: none;
+    width: 12rem;
+}
+
+.l-top_menu .inner .logo:before {
+    content: 'S H I K I M O R I';
+    font-size: 17px;
+    color: #363636;
+    font-family: 'Comfortaa';
+}
+
+.l-top_menu .menu-items>.entry.selected,
+.l-top_menu .menu-items>.entry {
+    color: #f0f0f0;
+}
+
+.l-top_menu .menu-items>.entry>a {
+    color: #363636;
+    font-size: 13px !important;
+    line-height: 39px;
+    height: 46px;
+}
+.l-top_menu .menu-items>.entry.calendar>a,
+.l-top_menu .menu-items>.entry.info>a {
+    padding-top: 11px;
+    height: 46px;
+}
+.l-top_menu .menu-search {
+    padding-top: 5px;
+    height: 46px;
+}
+.b-main_search .input {
+    height: 25px !important;
+}
+.b-main_search .input input {
+    margin-top: 2px;
+    font-size: 12px;
+}
+.l-top_menu .submenu {
+    margin-left: -5px !important;
+    border: none;
+}
+.l-top_menu .menu-userbox {
+    padding-top: 6px;
+    height: 46px;
+}
+.menu .avatar {
+    height: 23px;
+}
+
+/*перекраска ховера меню*/
+.l-top_menu .menu-items>.entry {
+    transition: .3s ease;
+    transition-delay: .3s;
+}
+
+.l-top_menu .menu-items>.entry:hover {
+    background-color: #f9a399;
+    transition-delay: 0s;
+}
+.l-top_menu .submenu>.entry {
+    background-color: #f9b2aa;
+}
+.l-top_menu .submenu>.entry.active,
+.l-top_menu .submenu>.entry:hover {
+    background-color: #f9a399;
+    color: #363636;
+}
+.b-main_search .popup li {
+    background-color: #f9b2aa;
+    color: #363636;
+}
+.b-main_search .popup li.active,
+.b-main_search .popup li:hover {
+    background-color: #f9a399;
+    color: #363636;
+}
+.b-main_search ul.popup {
+    background: none;
+}
+.l-top_menu .submenu>.entry {
+    color: #363636
+}
+.l-top_menu .menu-items>.entry.selected {
+    background: linear-gradient(to top, rgba(54, 54, 54, 0), #f9a399);
+}
+
+.l-top_menu .menu-search .arrow-container .arrow-down,
+.l-top_menu .menu-userbox .arrow-container .arrow-down {
+    display: none;
+}
+
+.b-comments .comments-loader,
+.b-comments .comments-hider,
+.b-comments .comments-expander,
+.b-comments .comments-loader:hover,
+.b-comments .comments-hider:hover,
+.b-comments .comments-expander:hover {
+    border: none;
+}
+
+.menu .contest {
+    height: 20px !important;
+    margin-top: 14px !important;
+}
+.menu .unread-count {
+    position: absolute;
+    right: 4px;
+    top: -2px;
+    font-size: 10px;
+    font-weight: bold;
+    text-align: center;
+    width: 20px;
+    height: 20px;
+    line-height: 16px;
+    background: #6cc96c;
+    color: #fff;
+    border: 2px solid #F9B2AA;
+}
+.l-top_menu .menu-items > .entry > .contest {
+    margin: 7px 5px 0 0;
+    position: relative;
+}
+.l-top_menu .menu-items > .entry > .contest::before {
+    position: absolute;
+    line-height: 20px;
+    width: 20px;
+    display: inline-block;
+    top: 0;
+    right: 0;
+}
+
+.l-top_menu .submenu > .entry,
+.b-main_search ul.popup li {
+    border-bottom: none;
+    height: 27px;
+    line-height: 27px;
+    min-width: 125px;
+    padding: 0 10px 0;
+    font-size: 12px !important;
+}
+
+.b-main_search ul.popup {
+    border: none;
+}
+
+.b-main_search.hovered .popup {
+    height: 216px;
+}
+
+/* --- 10. СКРОЛЛБАР --- */
+
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: var(--border-color); }
+::-webkit-scrollbar-thumb {
+    background-color: var(--accent-red);
+    border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background-color: #B33A3F;
+}
+
+/* --- 11. МОБИЛЬНАЯ АДАПТАЦИЯ --- */
+
+@media (max-width: 1023px) {
+    .p-profiles-show .b-feedback::after {
+        display: none;
+    }
+    
+    .p-profiles-show .profile-head:before {
+        background-size: contain;
+        height: 150px;
+    }
+
+    .p-profiles .profile-head .avatar {
+        width: 120px !important;
+        height: 120px !important;
+        margin-bottom: 45px;
+    }
+    .p-profiles .profile-head .c-brief .avatar .profile-actions {
+        bottom: -40px;
+    }
+    .p-profiles .profile-head .c-brief .avatar .profile-actions a {
+        font-size: 18px;
+    }
+}
