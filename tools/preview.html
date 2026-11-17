@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<title>goida2 - предпросмотр</title>
+<link rel="stylesheet" href="../THEME_FILE">
+<style>
+  /* Разметка повторяет реальную структуру Shikimori настолько, насколько нужно
+     для проверки цветов темы. Файл чисто вспомогательный. */
+  body { margin: 0; }
+  .l-top_menu-v2 { display: flex; align-items: center; height: 40px; padding: 0 20px; color: #fff; gap: 18px; }
+  .l-top_menu-v2 .logo-container { width: 160px; }
+  .l-top_menu-v2 .menu-dropdown > span { display: block; padding: 8px 10px; font: 12px sans-serif; }
+  .l-page { display: flex; gap: 16px; max-width: 1180px; margin: 0 auto; }
+  .profile-head { display: flex; gap: 24px; align-items: center; padding: 16px 0; }
+  .avatar { width: 180px; height: 180px; position: relative; }
+  .avatar img { width: 100%; height: 100%; object-fit: cover; border-radius: 28px; }
+  .c-brief header h1 { font-size: 2.2em; margin: 0; }
+  .c-brief header .misc { font: 11px sans-serif; }
+  .c-info { flex: 1; }
+  .b-stats_bar { margin: 14px 0; }
+  .b-stats_bar .title { display: flex; font: 13px sans-serif; margin-bottom: 6px; }
+  .b-stats_bar .title .compatibility { margin-left: auto; }
+  .b-stats_bar .bar { display: flex; height: 20px; border-radius: 5px; overflow: hidden; font: 12px sans-serif; color: #fff; }
+  .b-stats_bar .bar > div { display: flex; align-items: center; justify-content: center; }
+  .stat_names { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 8px; }
+  .stat_name { padding: 7px 13px; border-radius: 6px; font: 13px sans-serif; }
+  .cc-2.block { display: flex; gap: 13px; margin-top: 20px; }
+  .c-left { width: 60%; display: grid; grid-template-rows: auto auto; gap: 13px; }
+  .activity, .lifetime { border-radius: 13px; padding: 8px 8px 27px; }
+  .title, .label { font: 13px sans-serif; }
+  .graph { display: flex; align-items: flex-end; gap: 4px; height: 110px; padding: 10px 0; }
+  .graph .bar-container { flex: 1; height: 100%; display: flex; align-items: flex-end; position: relative; }
+  .graph .bar { width: 100%; background: 0 0 !important; position: relative; }
+  .graph .bar::before { content: ""; display: block; height: 100%; width: 100%; border-radius: 13px 13px 0 0; }
+  .lifetime .bar { height: 12px; display: flex; border-radius: 4px; overflow: hidden; }
+  .lifetime .bar .first { width: 62%; }
+  .c-right { width: 33%; display: flex; flex-direction: column; gap: 12px; }
+  .c-right .block { border-radius: 12px; padding: 10px; }
+  .c-right img { width: 100%; height: 70px; object-fit: cover; border-radius: 6px; }
+  .b-topic, .b-comment { margin-top: 16px; font: 14px/1.5 sans-serif; }
+  .b-comment > .inner { padding: 15px; border-radius: 6px; }
+  .b-button { padding: 8px 14px; border-radius: 6px; font: 13px sans-serif; }
+  .b-spoiler_block > span { display: inline-block; padding: 4px 10px; border-radius: 4px; font: 13px sans-serif; }
+  .b-spoiler_block > div { padding: 10px; margin-top: 6px; border-left: 4px solid; font: 13px sans-serif; }
+  a { font: 13px sans-serif; }
+  h2.headline { font-size: 15px; margin: 18px 0 10px; }
+</style>
+</head>
+<body class="p-profiles p-profiles-show">
+
+<div class="l-top_menu-v2">
+  <div class="logo-container"><a class="logo" href="#"><span class="glyph">.</span></a></div>
+  <div class="menu-dropdown"><span>Аниме</span></div>
+  <div class="menu-dropdown"><span>Манга</span></div>
+  <div class="menu-dropdown"><span>Профиль</span></div>
+  <div class="global-search"><input placeholder="Поиск по сайту"></div>
+</div>
+
+<div class="l-page">
+  <div class="l-content">
+    <div class="profile-head">
+      <div class="c-brief">
+        <div class="avatar"><img src="../assets/avatar.gif" alt=""></div>
+      </div>
+      <div class="c-info">
+        <div class="c-brief header"><h1>Vova_Burry</h1><div class="misc"><span>был на сайте</span></div></div>
+
+        <div class="b-stats_bar anime">
+          <div class="title"><span>Список аниме</span><span class="compatibility">похожие пользователи</span></div>
+          <div class="bar"><div class="first" style="width:45%">676</div><div class="second" style="width:35%"></div><div class="third" style="width:20%">525</div></div>
+          <div class="stat_names">
+            <span class="stat_name">Запланировано (503)</span>
+            <span class="stat_name">Смотрю (22)</span>
+            <span class="stat_name">Просмотрено (676)</span>
+          </div>
+        </div>
+
+        <div class="b-stats_bar manga">
+          <div class="title"><span>Список манги</span><span class="compatibility">похожие пользователи</span></div>
+          <div class="bar"><div class="first" style="width:10%">1</div><div class="second" style="width:20%"></div><div class="third" style="width:70%">10</div></div>
+          <div class="stat_names">
+            <span class="stat_name">Запланировано (10)</span>
+            <span class="stat_name">Прочитано (1)</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="cc-2 block">
+      <div class="c-left">
+        <div class="activity">
+          <div class="title">Активность</div>
+          <div class="graph">
+            <div class="bar-container" style="height:40%"><div class="bar"><div class="value">3</div></div></div>
+            <div class="bar-container" style="height:70%"><div class="bar"><div class="value">7</div></div></div>
+            <div class="bar-container" style="height:100%"><div class="bar"><div class="value">12</div></div></div>
+            <div class="bar-container" style="height:55%"><div class="bar"><div class="value">5</div></div></div>
+            <div class="bar-container" style="height:25%"><div class="bar"><div class="value">1</div></div></div>
+          </div>
+        </div>
+        <div class="lifetime">
+          <div class="title"><span class="value">18 дней 4 часа</span><span class="label">время за аниме</span></div>
+          <div class="bar"><div class="first"></div><div class="third" style="flex:1"></div></div>
+          <div class="times"><span class="time">1 год</span></div>
+        </div>
+      </div>
+      <div class="c-right">
+        <div class="block"><div class="subheadline">История</div><img src="../assets/profile-cover.jpg" alt=""></div>
+        <div class="block"><div class="subheadline">Друзья</div><img src="../assets/monster-bg-tile.jpg" alt=""></div>
+      </div>
+    </div>
+
+    <h2 class="headline">Обо мне</h2>
+    <div class="b-comment"><div class="inner">Текст комментария, <a href="#">ссылка</a> и кнопка:
+      <button class="b-button">Кнопка</button></div></div>
+    <div class="b-spoiler_block"><span>Спойлер</span><div>Скрытый текст спойлера.</div></div>
+  </div>
+</div>
+
+</body>
+</html>
