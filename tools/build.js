@@ -19,7 +19,7 @@ const path = require('node:path');
 
 const ROOT = path.resolve(__dirname, '..');
 
-const DEFAULT_OWNER = 'TopPelemeshka';
+const DEFAULT_OWNER = 'VovaBurry';
 const DEFAULT_REPO = 'shikimori-goida2';
 const DEFAULT_BRANCH = 'main';
 

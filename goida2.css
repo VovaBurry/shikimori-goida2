@@ -1,5 +1,5 @@
 /* goida2.css - итоговая тема, собранная из goida2.txt скриптом tools/build.js.
-   Ассеты подтягиваются из репозитория: https://raw.githubusercontent.com/TopPelemeshka/shikimori-goida2/main/assets/
+   Ассеты подтягиваются из репозитория: https://raw.githubusercontent.com/VovaBurry/shikimori-goida2/main/assets/
    Вручную не правим - меняем goida2.txt и пересобираем. */
 
 /* ============================================================
@@ -22,7 +22,7 @@ body {
     /* фон: бесшовный тайл с банками Monster (900x900).
        Повтор вместо растяжения - паттерн остаётся резким на любом
        разрешении и мониторе (1080p/1440p/4K), файл всего ~50 КБ. */
-    background: url('https://raw.githubusercontent.com/TopPelemeshka/shikimori-goida2/main/assets/monster-bg-tile.jpg') repeat fixed;
+    background: url('https://raw.githubusercontent.com/VovaBurry/shikimori-goida2/main/assets/monster-bg-tile.jpg') repeat fixed;
     background-color: #000;
     background-size: 900px 900px;
     font-family: var(--font-main);
@@ -43,7 +43,7 @@ body {
     font-style: normal;
     font-weight: 700;
     font-display: swap;
-    src: local('Comfortaa Bold'), url('https://raw.githubusercontent.com/TopPelemeshka/shikimori-goida2/main/assets/comfortaa-700-lat.woff2') format('woff2');
+    src: local('Comfortaa Bold'), url('https://raw.githubusercontent.com/VovaBurry/shikimori-goida2/main/assets/comfortaa-700-lat.woff2') format('woff2');
     unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 @font-face {
@@ -51,7 +51,7 @@ body {
     font-style: normal;
     font-weight: 700;
     font-display: swap;
-    src: url('https://raw.githubusercontent.com/TopPelemeshka/shikimori-goida2/main/assets/comfortaa-700-cyr.woff2') format('woff2');
+    src: url('https://raw.githubusercontent.com/VovaBurry/shikimori-goida2/main/assets/comfortaa-700-cyr.woff2') format('woff2');
     unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
 }
 @font-face {
@@ -59,21 +59,21 @@ body {
     font-style: normal;
     font-weight: 400;
     font-display: swap;
-    src: url('https://raw.githubusercontent.com/TopPelemeshka/shikimori-goida2/main/assets/lato-400-lat.woff2') format('woff2');
+    src: url('https://raw.githubusercontent.com/VovaBurry/shikimori-goida2/main/assets/lato-400-lat.woff2') format('woff2');
 }
 @font-face {
     font-family: 'Lato';
     font-style: normal;
     font-weight: 700;
     font-display: swap;
-    src: url('https://raw.githubusercontent.com/TopPelemeshka/shikimori-goida2/main/assets/lato-700-lat.woff2') format('woff2');
+    src: url('https://raw.githubusercontent.com/VovaBurry/shikimori-goida2/main/assets/lato-700-lat.woff2') format('woff2');
 }
 @font-face {
     font-family: 'Oswald';
     font-style: normal;
     font-weight: 700;
     font-display: swap;
-    src: url('https://raw.githubusercontent.com/TopPelemeshka/shikimori-goida2/main/assets/oswald-700-lat.woff2') format('woff2');
+    src: url('https://raw.githubusercontent.com/VovaBurry/shikimori-goida2/main/assets/oswald-700-lat.woff2') format('woff2');
     unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 @font-face {
@@ -81,7 +81,7 @@ body {
     font-style: normal;
     font-weight: 700;
     font-display: swap;
-    src: url('https://raw.githubusercontent.com/TopPelemeshka/shikimori-goida2/main/assets/oswald-700-cyr.woff2') format('woff2');
+    src: url('https://raw.githubusercontent.com/VovaBurry/shikimori-goida2/main/assets/oswald-700-cyr.woff2') format('woff2');
     unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
 }
 
@@ -108,8 +108,8 @@ body {
        в CSS его указать нельзя (значение отбрасывается).
        32x32 - рабочий вариант, 64x64 лежит рядом на случай, если
        захочешь крупнее (просто поменяй -32 на -64 и точку клика 1 1 -> 2 1). */
-    --cursor-default: url('https://raw.githubusercontent.com/TopPelemeshka/shikimori-goida2/main/assets/monster-cursor-32.png') 1 1, auto;
-    --cursor-pointer: url('https://raw.githubusercontent.com/TopPelemeshka/shikimori-goida2/main/assets/monster-pointer-32.png') 1 1, pointer;
+    --cursor-default: url('https://raw.githubusercontent.com/VovaBurry/shikimori-goida2/main/assets/monster-cursor-32.png') 1 1, auto;
+    --cursor-pointer: url('https://raw.githubusercontent.com/VovaBurry/shikimori-goida2/main/assets/monster-pointer-32.png') 1 1, pointer;
 }
 
 a, .b-link, button, [data-tab-switch], .b-js-link {
@@ -141,7 +141,7 @@ a, .b-link, button, [data-tab-switch], .b-js-link {
     height: 247px;
     right: 20px;
     bottom: 0;
-    background: url("https://raw.githubusercontent.com/TopPelemeshka/shikimori-goida2/main/assets/catgirl-corner.gif") no-repeat bottom right;
+    background: url("https://raw.githubusercontent.com/VovaBurry/shikimori-goida2/main/assets/catgirl-corner.gif") no-repeat bottom right;
     background-size: contain;
     z-index: 999;
     pointer-events: none;
@@ -159,7 +159,7 @@ a, .b-link, button, [data-tab-switch], .b-js-link {
     content: "";
     display: block;
     height: 300px;
-    background: url("https://raw.githubusercontent.com/TopPelemeshka/shikimori-goida2/main/assets/profile-cover.jpg") no-repeat center center;
+    background: url("https://raw.githubusercontent.com/VovaBurry/shikimori-goida2/main/assets/profile-cover.jpg") no-repeat center center;
     background-size: cover;
     margin: -25px -25px 25px -25px;
     border-radius: 8px 8px 0 0;
@@ -182,7 +182,7 @@ a, .b-link, button, [data-tab-switch], .b-js-link {
     aspect-ratio: 1 / 1;
     /* гиф-аватарка: анимированная тянка в очках (458x480, 5 кадров).
        Лежит в assets/ репозитория темы - без зависимости от Tenor. */
-    background: url("https://raw.githubusercontent.com/TopPelemeshka/shikimori-goida2/main/assets/avatar.gif") center / cover;
+    background: url("https://raw.githubusercontent.com/VovaBurry/shikimori-goida2/main/assets/avatar.gif") center / cover;
     border-radius: 28px;
     border: 4px solid var(--border-color);
     transition: border-color 0.3s ease;

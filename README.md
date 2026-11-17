@@ -1,5 +1,7 @@
 # shikimori-goida2
 
+Репозиторий: <https://github.com/VovaBurry/shikimori-goida2>
+
 Тема для [Shikimori](https://shikimori.one) — единый CSS-файл `goida2.css` и картинки/шрифты для него в `assets/`.
 
 ## Что внутри
@@ -11,6 +13,7 @@
 | `assets/` | Ассеты, на которые ссылается тема: тайл-фон Monster, курсор-банка, гиф-аватарка, тянка в углу, обложка профиля, шрифты Lato / Oswald / Comfortaa в `woff2` |
 | `tools/build.js` | Сборка `goida2.css` из `goida2.txt` с переводом ссылок на raw-URL репозитория |
 | `legacy/` | Черновики: `style.css`, `goida.css`, `Csss.css`, `iloveyuuko.css`, `pinky_style_blocked.css`, `style.min.css`, `style_formatted.txt` |
+| `sr/`, `niz/` | Исходники ассетов (не подключены к теме): обложки, фон без конверта, видео-заготовки для гифки |
 
 Тема оформляет: фон с банками Monster, курсор-банку, гиф-аватарку и обложку профиля, тянку в углу, верхнее меню с выпадающими списками аниме/манги, карточки активности и график, статистику, друзей, клубы, избранное и мобильную вёрстку.
 
@@ -27,7 +30,7 @@
 CSS не хранит картинки внутри, а подтягивает их из этого репозитория по `raw.githubusercontent.com`:
 
 ```css
-background: url("https://raw.githubusercontent.com/TopPelemeshka/shikimori-goida2/main/assets/avatar.gif") center / cover;
+background: url("https://raw.githubusercontent.com/VovaBurry/shikimori-goida2/main/assets/avatar.gif") center / cover;
 ```
 
 Так работают все 12 ссылок: `monster-bg-tile.jpg`, `monster-cursor-32.png`, `monster-pointer-32.png`, `catgirl-corner.gif`, `profile-cover.jpg`, `avatar.gif`, шесть файлов шрифтов.
